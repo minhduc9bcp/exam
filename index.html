@@ -35,19 +35,12 @@
       do {
         age = +prompt("Nhập tuổi sinh viên" + (i + 1));
       } while (age <= 18 || age >= 30);
+    
+        mark_html = +prompt("Nhập điểm HTML của sinh viên" + (i + 1));    
 
-      do {
-        mark_html = +prompt("Nhập điểm HTML của sinh viên" + (i + 1));
-
-      } while (mark_html <= 0 || >= 10);
-
-      do {
         mark_css = +prompt("Nhập điểm CSS của sinh viên" + (i + 1));
-      } while (mark_css <= 0 || >= 10);
 
-      do {
         mark_js = +prompt("Nhập điểm JS của sinh viên" + (i + 1));
-      } while (mark_js <= 0 || >= 10);
 
       avgMark = Number((mark_html + mark_css + mark_js) / 3);
       if (avgMark < 5) {
