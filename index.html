@@ -23,14 +23,14 @@
     let avgMark;
     let rank;
 
-    for (let i = 0;i < 1;i++) {
+    for (let i = 0;i < 5;i++) {
       do {
         studentId = prompt("Nhập mã sinh viên thứ " + (i + 1));
       } while (!studentId.startsWith("S") && studentId.length != 5);
 
       do {
         studentName = prompt("Nhập tên sinh viên" + (i + 1));
-      } while (studentName.length <= 6 || studentName.length >= 30);
+      } while (studentName.length < 6 || studentName.length > 30);
 
       do {
         age = +prompt("Nhập tuổi sinh viên" + (i + 1));
@@ -54,8 +54,7 @@
       } else {
         rank = "Xuất sắc";
       }
-
-
+      
       const studentChild = [studentId, studentName, age, mark_html, mark_css, mark_js, avgMark, rank];
       student.push(studentChild);
     }
@@ -72,7 +71,7 @@
     console.log(student);
 
     console.log("Tìm kiếm sinh viên");
-    student.includes("Ha");
+    student.includes("hanguyen");
   </script>
 </body>
 
